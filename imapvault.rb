@@ -5,21 +5,21 @@
 class Imapvault < Formula
   desc "IMAP backup with point-in-time snapshots, mass-deletion alerts and restore"
   homepage "https://imapvault.sh"
-  version "0.3.0"
+  version "0.4.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/michele/imapvault/releases/download/v0.3.0/imapvault_0.3.0_darwin_amd64.tar.gz"
-      sha256 "68f9795c8e6050e87002ad0582dc56ed76740740ec197a91f2ff230fd4d182dc"
+      url "https://github.com/michele/imapvault/releases/download/v0.4.0/imapvault_0.4.0_darwin_amd64.tar.gz"
+      sha256 "5114a0c44a0f78dbdc90b9206b3281c51dcbc39f99d71037d52d2216179ea52a"
 
       define_method(:install) do
         bin.install "imapvault"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/michele/imapvault/releases/download/v0.3.0/imapvault_0.3.0_darwin_arm64.tar.gz"
-      sha256 "b4047edfd0a063bf226a560970467ea9be6cf241fa063d0da88f5afe8669df65"
+      url "https://github.com/michele/imapvault/releases/download/v0.4.0/imapvault_0.4.0_darwin_arm64.tar.gz"
+      sha256 "8b51f6b8c8d7841ebe31d287924ebd0102910050ec8c4ddebdf44a8c49c637c0"
 
       define_method(:install) do
         bin.install "imapvault"
@@ -29,15 +29,15 @@ class Imapvault < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/michele/imapvault/releases/download/v0.3.0/imapvault_0.3.0_linux_amd64.tar.gz"
-      sha256 "99a17b8e65f48f6bcfb79b879e548afdafcc82c6af7c9f88ca58f2b773fe487b"
+      url "https://github.com/michele/imapvault/releases/download/v0.4.0/imapvault_0.4.0_linux_amd64.tar.gz"
+      sha256 "7e68a393d6f3750f6452d522acd613854bda7aaf799eab96e3853b3866ddc48f"
       define_method(:install) do
         bin.install "imapvault"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/michele/imapvault/releases/download/v0.3.0/imapvault_0.3.0_linux_arm64.tar.gz"
-      sha256 "0d31fa625a527e297028adbaaa6c4785ab34369cd8ec326b68a33073aaa4a63e"
+      url "https://github.com/michele/imapvault/releases/download/v0.4.0/imapvault_0.4.0_linux_arm64.tar.gz"
+      sha256 "0a50845d2445727e4097133041fe97beacef84aaa1a43001cdc3c79c106946da"
       define_method(:install) do
         bin.install "imapvault"
       end
